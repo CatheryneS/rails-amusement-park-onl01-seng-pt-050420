@@ -3,3 +3,7 @@
 <h3>Mood: <%= @user.mood%></h3>
 <h3>Ticket Amount: <%= @user.tickets%></h3>
 <h3>Height: <%= @user.height%> inches</h3>
+
+<% if @user.admin == true %>
+ <h3>You're an ADMIN.</h3>
+<% end %>

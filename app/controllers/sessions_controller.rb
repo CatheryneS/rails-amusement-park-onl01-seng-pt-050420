@@ -12,5 +12,6 @@ class SessionsController < ApplicationController
         if !session.empty?
             session.clear
         end
+        redirect_to root_path
     end
 end

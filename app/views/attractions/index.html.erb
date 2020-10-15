@@ -1,0 +1,5 @@
+<h1>Attractions List</h1>
+<br>
+<% @attractions.each do |att|%>
+    <h5><a href="<%= attraction_path(att)%>">Go on <%= att.name %></a></h5><br/>
+<% end %>

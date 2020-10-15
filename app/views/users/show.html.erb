@@ -1,9 +1,14 @@
+<% if flash.notice %>
+    <div class="alert"><%= flash.notice %></div>
+<% end %>
 <h1>Hi, <%= @user.name%>. Here are your stats.</h1>
 <br>
 <h3>Mood: <%= @user.mood%></h3>
-<h3>Ticket Amount: <%= @user.tickets%></h3>
+<h3>Tickets: <%= @user.tickets%></h3>
 <h3>Height: <%= @user.height%> inches</h3>
-
+<br>
 <% if @user.admin == true %>
  <h3>You're an ADMIN.</h3>
 <% end %>
+<h3><%= link_to 'See attractions', attractions_path %></h3>
+<h2><%= link_to 'Log Out', logout_path %> </h2>
